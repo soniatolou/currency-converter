@@ -1,32 +1,20 @@
-# Currency Converter
+Hey! This is a project I've been working on as part of my studies to become an AI & Machine Learning Engineer. It actually started out as a course assignment, but I wanted to take it a bit further and make it feel like a "real" tool.
 
-An object-oriented Python application for currency conversion. The program utilizes the Open Exchange Rates API to fetch real-time exchange rates and manage historical data.
+The main goal was to get comfortable working with APIs and handling data in a smart way. Instead of just doing basic calculations, I hooked this up to the **Open Exchange Rates API** so it pulls live, actual data from the web.
 
-## Features
+### How it works
 
-- Real-time conversion between USD and over 160 currencies.
-- Conversion between any currency pairs using USD as a base.
-- Smart caching with a one-hour TTL to optimize API usage and performance.
-- Fetch historical exchange rates for specific dates.
-- Export current rate data to JSON files for external use.
+Basically, you can flip USD into almost any currency. But since I wanted it to be useful, I also added a way to convert between any two currencies—like SEK to EUR—where the app handles all the "middle-man" math with USD in the background.
 
-## Installation and Usage
+### The Techy Bits
 
-1. Clone the repository:
-   git clone https://github.com/YOUR-USERNAME/currency-handler.git
+I used **Python** for the logic and the **Requests** library to handle the internet talk. For security, I used **Dotenv** so my API keys stay private (very important!). The data is managed through **JSON** and the whole thing is built with an object-oriented approach to keep the code clean.
 
-2. Install dependencies:
-   pip install -r requirements.txt
+### Want to play around with it?
 
-3. Create a .env file in the root directory and add your API key:
-   APP_ID=your_api_key_here
+1. Just clone the repo: `git clone https://github.com/soniatolou/currency-converter.git`
+2. Install the requirements: `pip install -r requirements.txt`
+3. You'll need an API key from Open Exchange Rates. Pop that into a `.env` file like this: `APP_ID=your_key_here`
+4. Run it: `python main.py`
 
-4. Run the application:
-   python main.py
-
-## Code Structure
-
-The project is divided into two files to separate logic from the user interface:
-
-- currencyhandler.py: Handles API requests, calculations, and caching.
-- main.py: Contains the application menu and handles user interaction.
+It’s been a fun challenge to bridge the gap between a school assignment and a working application!
